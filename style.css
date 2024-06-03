@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(0deg, rgba(9,18,18,1) 0%, rgba(45,93,168,1) 69%);
+}
+
+nav{
+    height: 40px;
+    background-color: black;
+    color: white;
+    
+    
+}
+
+nav ul{
+    list-style: none;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 95.5vh;
+    width: 100vw;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+
+}
+.box{
+    border: 2px solid black;
+    font-size:6vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: rgb(74, 101, 152);
+}
+
+.info{
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.reset{
+    border-radius: 10px;
+    padding:4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(9,18,18,1) 0%, rgba(45,93,168,1) 69%);
+}
+
+.turnmsg{
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.bt-0{
+    border-top: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+.gamefinished{
+    display:none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(9,18,18,0.4) 0%, rgba(45,93,168,0.9) 69%);
+
+}
+.winningmsg{
+    font-size: 3.0rem;
+    font-weight: bold;
+}
+
+.restart{
+    border-radius: 10px;
+    padding:10px;
+    margin: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: linear-gradient(0deg, rgba(9,18,18,1) 0%, rgba(45,93,168,1) 69%);
+
+}
+
+.showmsg{
+    display: flex;
+}
+
+@media  screen and (max-width:600px) {
+    .container{
+        flex-direction: column;
+    }
+    .game{
+        display: grid;
+        grid-template-columns: repeat(3,18vw);
+        grid-template-rows: repeat(3,18vw);
+    
+    }
+    .box{
+        font-size:10vw;
+    }
+    .info{
+        margin-top: 20px;
+    }
+}
